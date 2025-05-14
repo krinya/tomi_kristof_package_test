@@ -18,7 +18,7 @@ packages = [{include = "tomi_kristof_package_test", from = "src"}]
 [tool.pytest]
 pythonpath = ["src"]
 
-[tool.poetry.grop.dev]
+[tool.poetry.group.dev]
 optional = true
 
 [build-system]
