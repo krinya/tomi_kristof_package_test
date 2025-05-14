@@ -18,6 +18,9 @@ packages = [{include = "tomi_kristof_package_test", from = "src"}]
 [tool.pytest]
 pythonpath = ["src"]
 
+[tool.poetry.grop.dev]
+optional = true
+
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
