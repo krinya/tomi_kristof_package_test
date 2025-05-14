@@ -36,15 +36,7 @@ jobs:
           virtualenvs-in-project: true # Cache venv in project dir
           installer-parallel: true
 
-      - name: Load cached venv # Speed up builds by caching dependencies
-        id: cached-poetry-dependencies
-        uses: actions/cache@v4
-        with:
-          path: .venv
-          key: venv-${{ runner.os }}-${{ matrix.python-version }}-${{ hashFiles('**/poetry.lock') }}
-
-      - name: Install dependencies (if cache miss)
-        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+      - name: Install dependencies
         run: poetry install --no-interaction --no-root --with dev
 
       - name: Install project package with dev dependencies
