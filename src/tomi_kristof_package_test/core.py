@@ -15,4 +15,4 @@ def greet(name: str) -> str:
     if not name:
         # Handle empty string case if desired
         return "Hello there!"
-    return f"Hello, {name}! Nice to see you."
+    return f"Hello, {name}! Nice to see you again."
